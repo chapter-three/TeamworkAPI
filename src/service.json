@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://foo.teamwork.com",
+  "baseUrl": "http://youraccount.teamwork.com",
   "name": "teamwork",
   "apiVersion": "2",
   "description": "Service description used for talking to the Teamwork ReST API.",
@@ -8,6 +8,13 @@
       "summary": "Get Account Details <http://developer.teamwork.com/account>",
       "httpMethod": "GET",
       "uri": "account.json",
+      "responseModel": "accountResponse",
+      "parameters": {}
+    },
+    "RetrieveAllProjects": {
+      "summary": "Retrieves all accessible projects. Default returns your active projects.",
+      "httpMethod": "GET",
+      "uri":  "projects.json",
       "responseModel": "accountResponse",
       "parameters": {}
     }
