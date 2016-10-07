@@ -1,0 +1,58 @@
+{
+  "baseUrl": "http://foo.teamwork.com",
+  "name": "teamwork",
+  "apiVersion": "2",
+  "description": "Service description used for talking to the Teamwork ReST API.",
+  "operations": {
+    "Account": {
+      "summary": "Get Account Details <http://developer.teamwork.com/account>",
+      "httpMethod": "GET",
+      "uri": "account.json",
+      "responseModel": "accountResponse",
+      "parameters": {}
+    }
+  },
+  "models": {
+    "failureResponse": {
+      "type": "object",
+      "properties": {
+        "STATUS": {
+          "type": "string",
+          "required": true
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "The detailed message from the server."
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": {
+        "location": "json"
+      }
+    },
+    "accountResponse": {
+      "type": "object",
+      "extends": "failureResponse",
+      "location": "json",
+      "properties": {
+        "account": {
+          "type": "object",
+          "required": true,
+          "properties": {
+            "companyname": {
+              "type": "string",
+              "required": true,
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -2,9 +2,9 @@
 <phpunit bootstrap="./tests/bootstrap.php"
          colors="true">
     <php>
-        <!-- Specify your twitter OAuth credentials -->
-        <server name="BASIC_USERNAME" value="" />
-        <server name="BASIC_PASS" value="" />
+        <!-- Specify your Teamwork API endpoint and token. -->
+        <server name="BASE_URI" value="http://foo.teamwork.com" />
+        <server name="API_TOKEN" value="@h_AAa9v_6_UZ-Vp%+%EZMTrko5T2@un" />
     </php>
     <testsuites>
         <testsuite>
