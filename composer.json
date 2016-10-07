@@ -1,0 +1,37 @@
+{
+    "name": "chapter-three/teamwork-api",
+    "description": "Provides a guzzle 6+ api client for the Teamwork ReST API",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["Teamwork", "PHP", "GuzzleHTTP"],
+    "authors": [
+        {
+            "name": "Jaesin Mulenex",
+            "email": "Jaesin@users.noreply.github.com"
+        },
+        {
+            "name": "mfr",
+            "email": "mfr@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "guzzlehttp/guzzle-services": "dev-guzzle6-pr1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "guzzlehttp/guzzle": "~6.0-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "ChapterThree\\TeamworkAPI\\": "src"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Konafets/guzzle-services.git"
+        }
+    ],
+    "minimum-stability": "dev"
+}
