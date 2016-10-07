@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/chapter-three/TeamworkAPI.svg?branch=master)](https://travis-ci.org/chapter-three/TeamworkAPI)
+
 # TeamworkAPI
 
 ## API Token
