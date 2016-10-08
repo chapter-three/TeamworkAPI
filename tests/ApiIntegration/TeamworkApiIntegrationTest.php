@@ -27,12 +27,13 @@ class TeamworkApiIntegrationTest extends PHPUnit_Framework_TestCase {
 
     public function testGetCommand()
     {
-        /** @var \GuzzleHttp\Command\Result $result */
-        $result = $this->client->Account();
+        $result = $this->client->Account()->toArray();
 
         self::assertArraySubset([
             'STATUS' => 'OK'
-        ], $result->toArray());
+        ], $result);
+
+        self::assertNotEmpty($result['account']['companyname']);
     }
 
 
