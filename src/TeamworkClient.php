@@ -29,7 +29,15 @@ class TeamworkClient extends GuzzleClient implements TeamworkClientInterface {
             ['baseUrl' => $config['base_uri']] + (array) json_decode(file_get_contents(__DIR__ . '/service.json'), TRUE)
         );
 
-        return new static(new Client(), $service_description, NULL, NULL, NULL, $config);
+        // Generate the authentication hash.
+        $auth_hash = 'Basic ' . base64_encode($config['api_token'].":xxx");
+        // Creates the client and sets the default request headers.
+        $client = new Client(['headers' => [
+            'Content-Type' => 'application/json',
+            'Accept' => 'application/json',
+            'Authorization' => $auth_hash,
+        ]]);
+        return new static($client, $service_description, NULL, NULL, NULL, $config);
     }
 
 }

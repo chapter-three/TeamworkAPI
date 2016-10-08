@@ -55,7 +55,7 @@
           "properties": {
             "companyname": {
               "type": "string",
-              "required": true,
+              "required": true
             }
           }
         }
