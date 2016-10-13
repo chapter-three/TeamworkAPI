@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="./tests/bootstrap.php"
-         colors="true">
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         stopOnFailure="false"
+         bootstrap="./vendor/autoload.php"
+>
     <php>
         <!-- Specify your Teamwork API endpoint and token. -->
         <server name="BASE_URI" value="http://foo.teamwork.com" />
