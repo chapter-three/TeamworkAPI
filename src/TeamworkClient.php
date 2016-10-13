@@ -35,8 +35,7 @@ class TeamworkClient extends GuzzleClient implements TeamworkClientInterface {
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json',
             ],
-            'defaults' => ['auth' =>  [$config['api_token'], 'xxx']],
-
+            'auth' =>  [$config['api_token'], 'xxx'],
         ]);
         return new static($client, $service_description, NULL, NULL, NULL, $config);
     }
