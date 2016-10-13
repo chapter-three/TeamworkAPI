@@ -15,4 +15,4 @@ install:
   - travis_retry composer self-update
   - travis_retry composer install --no-interaction --prefer-source
 
-script: vendor/bin/phpunit --exclude-group=teamwork-api-integration -c phpunit.xml.dist
+script: vendor/bin/phpunit --exclude-group=teamwork-api-integration -c phpunit.xml.dist --coverage-text

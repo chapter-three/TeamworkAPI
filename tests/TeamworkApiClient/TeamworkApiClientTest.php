@@ -5,14 +5,13 @@ namespace ChapterThree\TeamworkAPI\Tests\TeamworkApiClient;
 use ChapterThree\TeamworkAPI\TeamworkClient;
 use ChapterThree\TeamworkAPI\TeamworkClientInterface;
 use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\Psr7\Stream;
 use GuzzleHttp\Tests\Server;
 use PHPUnit_Framework_TestCase;
 
 /**
  * @group teamwork-unit
+ * @coversDefaultClass \ChapterThree\TeamworkAPI\TeamworkClient
  */
-
 class TeamworkApiClientTest extends PHPUnit_Framework_TestCase {
 
     /**
@@ -34,6 +33,9 @@ class TeamworkApiClientTest extends PHPUnit_Framework_TestCase {
         ]);
     }
 
+    /**
+     * @covers ::create
+     */
     public function testFactoryMethod()
     {
         $client = TeamworkClient::create([
